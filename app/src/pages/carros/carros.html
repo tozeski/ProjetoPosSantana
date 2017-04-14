@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Carros</ion-title>
+    <ion-buttons end>
+
+      <ion-icon name="options"></ion-icon>
+
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!--
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  -->
+  <ion-list>
+    <button ion-item *ngFor="let item of items | async" (click)="itemTapped(item)">
+      <span [ngStyle]="{'text-decoration':!item.status ? 'line-through' : 'none'}">{{item.title}}</span>
+        <ion-icon name="settings" (click)="detalhe($event, item)" item-right></ion-icon>
+        <ion-icon name="trash" (click)="removerCarro($event, item)" color="danger" item-right></ion-icon>
+    </button>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button (click)="addCarro()" ion-fab>
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>

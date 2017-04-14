@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Detalhes do Carrinho</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+   
+   
+    <ion-card-content>
+      <ion-card-title [ngStyle]="{'text-decoration': !carro.status ? 'line-through' : 'none' }">
+        {{carro.title}}
+        <br />
+        <div style="text-align: center">
+          <img style="max-width: 150px; display: inline-block" [src]="carro.foto" *ngIf="carro.foto" />
+        </div>
+        
+      </ion-card-title>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small (click)="marcar()" icon-left color="{{ carro.status ? '' : 'danger' }}">
+          <ion-icon name="{{ carro.status ? 'checkmark' : 'close' }}"></ion-icon>
+          {{ carro.status ? 'em coleção' : 'perdido' }}
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button clear small (click)="tirarFoto()" icon-left>
+          <ion-icon name='camera'></ion-icon>
+          Foto
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" (click)="excluir()" icon-left>
+          <ion-icon name='trash'></ion-icon>
+          Excluir
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-card-content>
+        
+    </ion-card-content>
+
+    
+      
+    
+
+  </ion-card>
+
+  <div id="map" style="height: 100%;"></div>
+  
+</ion-content>

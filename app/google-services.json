@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "503056826508",
+    "project_id": "tarefas-fab49"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503056826508:android:93b897e4c2b993fd",
+        "android_client_info": {
+          "package_name": "com.ionicframework.app647587"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "503056826508-r3qgq6jftrmsoq9tnto0lp2hv5jgt0fv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ionicframework.app647587",
+            "certificate_hash": "ed003deda8a7cb16dbe3f4f5a19b21cbfd8ed142"
+          }
+        },
+        {
+          "client_id": "503056826508-a9ja1c4ufd0ogteb1b9v00pfbjbri7fc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkCVD33q7Ib_zE3oNzPtK-9FGP-I6o-1E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
